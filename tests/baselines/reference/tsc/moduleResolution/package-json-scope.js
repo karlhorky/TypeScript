@@ -66,8 +66,7 @@ Output::
 /lib/tsc -p src --explainFiles --extendedDiagnostics
 File '/src/projects/project/src/package.json' does not exist.
 Found 'package.json' at '/src/projects/project/package.json'.
-File '/src/projects/project/src/package.json' does not exist according to earlier cached lookups.
-File '/src/projects/project/package.json' exists according to earlier cached lookups.
+Lookup for package.json from '/src/projects/project/src' was found in cache and resolves to '/src/projects/project/package.json'.
 ======== Resolving module './fileB.mjs' from '/src/projects/project/src/fileA.ts'. ========
 Module resolution kind is not specified, using 'Node16'.
 Resolving in CJS mode with conditions 'require', 'types', 'node'.
@@ -254,11 +253,7 @@ File '/src/projects/project/package.json' does not exist.
 File '/src/projects/package.json' does not exist.
 File '/src/package.json' does not exist.
 File '/package.json' does not exist.
-File '/src/projects/project/src/package.json' does not exist according to earlier cached lookups.
-File '/src/projects/project/package.json' does not exist according to earlier cached lookups.
-File '/src/projects/package.json' does not exist according to earlier cached lookups.
-File '/src/package.json' does not exist according to earlier cached lookups.
-File '/package.json' does not exist according to earlier cached lookups.
+Lookup for package.json from '/src/projects/project/src' was found in cache and does not resolve.
 ======== Resolving module './fileB.mjs' from '/src/projects/project/src/fileA.ts'. ========
 Module resolution kind is not specified, using 'Node16'.
 Resolving in CJS mode with conditions 'require', 'types', 'node'.
@@ -267,7 +262,7 @@ File name '/src/projects/project/src/fileB.mjs' has a '.mjs' extension - strippi
 File '/src/projects/project/src/fileB.mts' exists - use it as a name resolution result.
 ======== Module name './fileB.mjs' was successfully resolved to '/src/projects/project/src/fileB.mts'. ========
 File '/lib/package.json' does not exist.
-File '/package.json' does not exist according to earlier cached lookups.
+Lookup for package.json from '/' was found in cache and does not resolve.
 [96msrc/fileA.ts[0m:[93m1[0m:[93m21[0m - [91merror[0m[90m TS1479: [0mThe current file is a CommonJS module whose imports will produce 'require' calls; however, the referenced file is an ECMAScript module and cannot be imported with 'require'. Consider writing a dynamic 'import("./fileB.mjs")' call instead.
   To convert this file to an ECMAScript module, change its file extension to '.mts' or create a local package.json file with `{ "type": "module" }`.
 

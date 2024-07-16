@@ -98,7 +98,7 @@ Output::
 
 Found 'package.json' at '/src/projects/project/packages/a/package.json'.
 File '/src/projects/project/packages/a/test/package.json' does not exist.
-File '/src/projects/project/packages/a/package.json' exists according to earlier cached lookups.
+Lookup for package.json from '/src/projects/project/packages/a' was found in cache and resolves to '/src/projects/project/packages/a/package.json'.
 ======== Resolving module 'a' from '/src/projects/project/packages/a/test/index.js'. ========
 Module resolution kind is not specified, using 'NodeNext'.
 Resolving in ESM mode with conditions 'import', 'types', 'node'.

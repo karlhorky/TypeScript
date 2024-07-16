@@ -2934,7 +2934,8 @@ export class AutoImportProviderProject extends Project {
 
     /** @internal */
     override getModuleResolutionCache() {
-        return this.hostProject.getCurrentProgram()?.getModuleResolutionCache();
+        // TODO:: sheetal dont override this when resolutions are shared across projects
+        return this.hostProject.getModuleResolutionCache();
     }
 }
 

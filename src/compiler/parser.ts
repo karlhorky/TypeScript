@@ -288,7 +288,6 @@ import {
     ObjectLiteralExpression,
     OperatorPrecedence,
     OptionalTypeNode,
-    PackageJsonInfo,
     ParameterDeclaration,
     ParenthesizedExpression,
     ParenthesizedTypeNode,
@@ -336,6 +335,7 @@ import {
     skipTrivia,
     some,
     SourceFile,
+    SourceFileWithPackageJsonInfo,
     SpreadAssignment,
     SpreadElement,
     startsWith,
@@ -1330,9 +1330,11 @@ export interface CreateSourceFileOptions {
      * check specified by `isFileProbablyExternalModule` will be used to set the field.
      */
     setExternalModuleIndicator?: (file: SourceFile) => void;
-    /** @internal */ packageJsonLocations?: readonly string[];
-    /** @internal */ packageJsonScope?: PackageJsonInfo;
     jsDocParsingMode?: JSDocParsingMode;
+}
+
+/** @internal */
+export interface CreateSourceFileOptions extends SourceFileWithPackageJsonInfo {
 }
 
 function setExternalModuleIndicator(sourceFile: SourceFile) {

@@ -330,6 +330,7 @@ function verifyProgramStructureAndResolutionCache(
             writeLog: ts.noop,
         },
         caption,
+        /*usesPackageJsonCache*/ false,
         userResolvedModuleNames,
     );
 }
