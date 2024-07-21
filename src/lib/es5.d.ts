@@ -1486,11 +1486,9 @@ interface Array<T> {
 }
 
 interface ArrayConstructor {
-    new (arrayLength?: number): any[];
-    new <T>(arrayLength: number): T[];
+    new <T = undefined>(arrayLength: number): T[];
     new <T>(...items: T[]): T[];
-    (arrayLength?: number): any[];
-    <T>(arrayLength: number): T[];
+    <T = undefined>(arrayLength: number): T[];
     <T>(...items: T[]): T[];
     isArray(arg: any): arg is any[];
     readonly prototype: any[];
